@@ -9,4 +9,4 @@ Second command :- "npm start"
 - Runs the app in the development mode.\
   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Made by [https://ramanbaral.com.np](Raman)
+Made by [Raman Baral](https://ramanbaral.com.np)
