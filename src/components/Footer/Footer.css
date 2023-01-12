@@ -1,0 +1,16 @@
+footer {
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+}
+
+footer a {
+    color: white;
+}
+
+#footer-author {
+    font-weight: bolder;
+}
+
