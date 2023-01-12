@@ -24,13 +24,12 @@ function QuoteBox() {
     "#EBB3A9",
     "#38A3A5",
     "#684A52",
-    "#2A2B2A",
     "#706C61",
   ];
 
   function newQuote() {
     getRandomQuote();
-
+    getRandomColor();
   }
 
   function getRandomQuote() {
@@ -40,17 +39,24 @@ function QuoteBox() {
     setCurrentAuthor(quote.author);
   }
 
+  function getRandomColor() {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    setCurrentColor(color);
+    document.body.style.backgroundColor = color;
+  }
+
   useEffect(() => {
     getRandomQuote();
+    getRandomColor();
   }, []);
 
   return (
     <div id="quote-box">
-      <img src={QuoteLeft} alt="Quote Left" style={{fontSize: "16px" }} />
-      <p id="text">{currentQuote}</p>
-      <span id="author">- {currentAuthor}</span>
+      <img src={QuoteLeft} alt="Quote Left" />
+      <p id="text" style={{"color": currentColor}}>{currentQuote}</p>
+      <span id="author" style={{"color": currentColor}}>- {currentAuthor}</span>
       <div className="btns">
-        <button>
+        <button style={{"backgroundColor": currentColor}}>
           <a
             href={TWEETLINK}
             id="tweet-quote"
@@ -60,7 +66,7 @@ function QuoteBox() {
             <img src={TwitterIcon} alt="Twitter icon" />
           </a>
         </button>
-        <button id="new-quote" onClick={newQuote}>New quote</button>
+        <button id="new-quote" onClick={newQuote} style={{"backgroundColor": currentColor}}>New quote</button>
       </div>
     </div>
   );
