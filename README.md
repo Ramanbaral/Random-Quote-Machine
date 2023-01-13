@@ -1,6 +1,8 @@
 # Random Quote Generator
 Generates random, motivating quotes which you can read and tweet with one click.
 
+[https://ramanbaral.github.io/Random-Quote-Machine/](https://ramanbaral.github.io/Random-Quote-Machine/)
+
 ### steps to run this app on your machine
 Frist command :- "npm install"
 - to install all the dependencies required to make this app.
